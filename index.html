@@ -1,0 +1,63 @@
+<html>
+	
+<head>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	
+	function checkLogin(){
+		if(document.getElementById('email').value == "business"){
+			window.location="business.html"
+		}
+		else if(document.getElementById('email').value == "user"){
+			window.location="user.html"
+		}
+		else{
+			document.getElementById('errorMsg').innerHTML='Please login using correct credentials'
+		}
+	}
+
+
+</script>
+
+</head>
+
+<body>
+	
+	<div class="container">
+	<div class="panel">
+	<div class="panel panel-heading">
+		<div class="jumbotron" style="text-align: center;">
+			<h1 class="display-3">
+				Build Customer with Built Trust
+			</h1>
+			<hr/>
+			<h5>This application has the analysis of customer complaints data to get the insights of what are the problems which resist a customer to trust on the financial organisation. With the trust of the customer, the company will automatically regain its productivity by providing personal finance.</h5>
+		</div>
+		</div>
+		<div class="panel panel-default">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4" style="text-align: center;">
+				<table class="table table-hover">
+					<input type="text" placeholder="Email ID" id="email" class="form-control"><br/>
+					<input type="submit" onclick="checkLogin()" class="btn btn-info">
+				</table>
+			</div>
+		</div>
+		</div>
+		<div class="panel panel-footer" style="margin-bottom: 40px">
+		<div class="alert" style="text-align: center;">
+			<div id="errorMsg">Login - "user" for user <br/> "business" for business</div>
+		</div>
+		</div>
+		</div>
+	</div>
+
+</body>
+
+
+</html>
